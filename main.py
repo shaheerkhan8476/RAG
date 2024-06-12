@@ -72,7 +72,7 @@ if user_query is not None and user_query != "":
 
     with st.chat_message("AI"):
         # Load and split documents  
-        with st.spinner("Thinking"):
+        with st.spinner("Thinking..."):
             if st.session_state.url:
                 doc_splits = load_and_split_document(st.session_state.url)
                 vectorstore = initialize_vectorstore(doc_splits)
